@@ -17,9 +17,14 @@ build:
   string: {{ mpi }}
   # TODO: support Windows when msmpi is packaged
   skip: true  # [win]
+  ignore_run_exports:
+    - {{ compiler('c') }}
 
-requirements: {}
+requirements:
   # None, mpi providers should depend on me
+  # add c-compiler dependency to get build matrix
+  build:
+    - {{ compiler('c') }}
 
 test:
   commands:
