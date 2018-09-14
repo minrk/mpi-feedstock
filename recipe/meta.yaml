@@ -13,7 +13,7 @@ package:
 build:
   # We mustn't use the build number in the mpi package - because we are defining the string,
   # manually we would not be producing unique filenames.
-  number: 0
+  number: 1000
   string: {{ mpi }}
   # TODO: support Windows when msmpi is packaged
   skip: true  # [win]
